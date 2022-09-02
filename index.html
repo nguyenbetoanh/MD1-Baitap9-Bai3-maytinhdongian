@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input {
+            width: 430px;
+            height: 50px;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            font-size: 35px;
+            color: blue;
+            background-color: darkgray;
+        }
+
+        body {
+            margin-left: 500px;
+            margin-top: 200px;
+        }
+        table{
+            background-color:cyan;
+        }
+    </style>
+</head>
+<body>
+<h1>Máy tính đơn giản</h1>
+<table border="1" cellpadding="10" cellspacing="0">
+    <tr>
+        <th colspan="4"><input type="text" id="hienthi"style="background-color:pink;font-size: 35px"></th>
+    </tr>
+    <tr>
+        <th>
+            <button onclick="number('1')">1</button>
+        </th>
+        <th>
+            <button onclick="number('2')">2</button>
+        </th>
+        <th>
+            <button onclick="number('3')">3</button>
+        </th>
+        <th>
+            <button onclick="number('+')">+</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button onclick="number('4')">4</button>
+        </th>
+        <th>
+            <button onclick="number('5')">5</button>
+        </th>
+        <th>
+            <button onclick="number('6')">6</button>
+        </th>
+        <th>
+            <button onclick="number('-')">-</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button onclick="number('7')">7</button>
+        </th>
+        <th>
+            <button onclick="number('8')">8</button>
+        </th>
+        <th>
+            <button onclick="number('9')">9</button>
+        </th>
+        <th>
+            <button onclick="number('*')">*</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button onclick="reset('C')">C</button>
+        </th>
+        <th>
+            <button onclick="number('0')">0</button>
+        </th>
+        <th>
+            <button onclick="ketQua('=')">=</button>
+        </th>
+        <th>
+            <button onclick="number('/')">/</button>
+        </th>
+    </tr>
+</table>
+<script>
+
+    function number(a){
+        document.getElementById('hienthi').value+=a
+    }
+    function reset() {
+        document.getElementById('hienthi').value=''
+    }
+    function ketQua() {
+        let input = document.getElementById('hienthi').value;
+        let ketQua = eval(input)
+        document.getElementById('hienthi').value = ketQua
+    }
+</script>
+</body>
+</html>
